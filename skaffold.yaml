@@ -1,0 +1,27 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./infra/k8s/*
+      - ./infra/k8s-dev/*
+build:
+  local:
+    push: false
+  artifacts:
+    - image: gsdatabase/api
+      context: api
+      docker:
+        dockerfile: Dockerfile.prod
+      sync:
+        manual:
+          - src: "./api/**/*.js"
+            dest: .
+    - image: gsdatabase/client
+      context: client
+      docker:
+        dockerfile: Dockerfile.prod
+      sync:
+        manual:
+          - src: "client/**/*.js"
+            dest: .
