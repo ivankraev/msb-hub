@@ -2,7 +2,7 @@ The repository represents the components of management plane for the MSB-Hub
 
 This repo leverages docker, extensively, to avoid having to manage tool chains and environments during both development and automated builds. The published container images are:
 
-- `backend/` - An [Express](https://https://expressjs.com/) (NodeJS) application that provides the management information model and APIs for MSB-Hub.
+- `api/` - An [Express](https://https://expressjs.com/) (NodeJS) application that provides the management information model and APIs for MSB-Hub.
   - Docker image available at [--link](--link--)
   - [`README.md`](api/README.md)
 - `client/` - MSB-Hub Frontend: A [React](https://reactjs.org/) (JavaScript) application that provides the user interface for MSB-Hub. This component is served by an NGINX configuration 
