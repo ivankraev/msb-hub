@@ -24,8 +24,6 @@ pgClient.on("connect", async client => {
     .query("CREATE TABLE IF NOT EXISTS values (number INT)")
     .catch(err => console.log("PG ERROR", err));
 
-  await client.query("INSERT INTO values(number) VALUES($1)", [5])
-    .catch(err => console.log("PG ERROR", err));
 });
 
 app.get("/", (req, res) => {
