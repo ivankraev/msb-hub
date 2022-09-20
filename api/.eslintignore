@@ -2,3 +2,5 @@ node_modules
 build
 coverage
 .env
+ecosystem.config.js
+jest.config.ts
