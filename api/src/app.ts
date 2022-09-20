@@ -15,7 +15,7 @@ const gracefulShutdown = ({
   logger.info(`Got signal ${signal}. Shutting down...`);
   server.close();
 
-  // kill db connection then kill the process
+  // kill db connection then kill the processs
   process.exit(0);
 };
 
