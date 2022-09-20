@@ -12,7 +12,7 @@ build:
     - image: gsdatabase/api
       context: api
       docker:
-        dockerfile: Dockerfile.prod
+        dockerfile: Dockerfile.dev
       sync:
         manual:
           - src: "./api/**/*.js"
