@@ -1,0 +1,5 @@
+apps:
+  - name: msp-hub
+    script: ./build/app.js
+    exec_mode: cluster
+    instances: max
