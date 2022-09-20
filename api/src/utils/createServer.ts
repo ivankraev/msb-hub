@@ -8,7 +8,7 @@ const corsOptions = {
   origin: config.API_HOST,
 };
 
-function createServer() {
+export const createServer = () => {
   const app = express();
 
   app.use(cors(corsOptions));
@@ -25,6 +25,4 @@ function createServer() {
   });
 
   return app;
-}
-
-export default createServer;
+};

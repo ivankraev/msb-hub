@@ -37,7 +37,7 @@ WORKDIR /home/node/app
 RUN npm i -g pm2
 
 # Copy package.json, package-lock.json and process.yml
-COPY package*.json process.yml ./
+COPY package*.json process.yml ecosystem.config.js ./
 
 RUN chmod 777 /home/node/app/package-lock.json
 
