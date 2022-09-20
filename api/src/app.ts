@@ -4,7 +4,7 @@ import { createServer } from '@utils/createServer';
 import { logger } from '@utils/logger';
 
 const signals = ['SIGINT', 'SIGTERM', 'SIGHUP'] as const;
-const test;
+
 const gracefulShutdown = ({
   signal,
   server,
