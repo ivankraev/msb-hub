@@ -1,57 +1,44 @@
+FROM node:16-alpine3.16 AS base
 ARG PORT=3000
 
-#building stage
-
-FROM node:16-alpine AS builder
-
+# Build target builder #
+########################
+FROM base as builder
 # Use /app as the CWD
-WORKDIR /app            
-
+WORKDIR /app   
 # Copy package.json and package-lock.json to /app
 COPY package*.json ./   
-
 # Install all dependencies
 RUN npm i         
-
 # Copy the rest of the code
 COPY . .                
-
 # Invoke the build script to transpile ts code to js
 RUN npm run build    
 
-# Final stage
-
-FROM node:16-alpine AS final
-
-
+# Build target production #
+###########################
+FROM base AS final
 # Update the system
 RUN apk --no-cache -U upgrade
-
 # Prepare destination directory and ensure user node owns it
 RUN mkdir -p /home/node/app/build && chown -R node:node /home/node/app 
-
 # Set CWD
 WORKDIR /home/node/app
-
 # Install PM2
 RUN npm install -g pm2
-
 # Copy package.json, package-lock.json and process.yml
 COPY package*.json process.yml ecosystem.config.js ./
-
+# Provide access to the package-lock.json (for some reason 700 doesnt work)
 RUN chmod 777 /home/node/app/package-lock.json
-
-# Switch to user node
-USER node
-
 # Install libraries as user node
 RUN npm i --omit=dev
-
 # Copy js files and change ownership to user node
 COPY --chown=node:node --from=builder /app/build ./build
-
 # Open desired port
 EXPOSE ${PORT}
+
+# Dont run as root
+USER node
 
 # Use PM2 to run the application as stated in config file
 ENTRYPOINT ["pm2-runtime", "./process.yml"] 
