@@ -1,5 +1,0 @@
-apps:
-  - name: msp-hub
-    script: './ecosystem.config.js'
-    exec_mode: cluster
-    instances: max
