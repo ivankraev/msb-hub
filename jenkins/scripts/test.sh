@@ -1,5 +1,3 @@
 #!/usr/bin/env sh
 
-cd ..
-cd ..
-npm test
+echo testing
