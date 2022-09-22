@@ -28,16 +28,16 @@ pipeline {
 
         stage('docker build image') {
             steps {
-                sh 'cd api && docker build -t gsdatabase/api . -f Dockerfile.prod'
+                sh 'cd api && docker build -t msb-hub-api -f Dockerfile.prod .'
             }
         }
         
-        stage('Deliver') {
+        stage('push to ecr') {
             steps {
-                sh 'echo finish'
-                sh 'docker image ls'
+                sh 'aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 501107650877.dkr.ecr.eu-central-1.amazonaws.com'
+                sh 'docker tag msb-hub-api:latest 501107650877.dkr.ecr.eu-central-1.amazonaws.com/msb-hub:latest'
                 sh 'docker image rm gsdatabase/api'
-                sh 'docker image ls'
+                sh 'docker push 501107650877.dkr.ecr.eu-central-1.amazonaws.com/msb-hub:latest'
             }
         }
 
