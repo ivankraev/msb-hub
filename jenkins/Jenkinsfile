@@ -7,7 +7,6 @@ pipeline {
     environment {
         CI = 'true'
     }
-    
     stages {
         stage('grant permission'){
             steps {
@@ -28,29 +27,18 @@ pipeline {
 
         stage('docker build image') {
             steps {
-                sh 'cd api && docker build -t msb-hub-api -f Dockerfile.prod .'
-                sh 'cd client && docker build -t msb-hub-client -f Dockerfile.prod .'
+                sh './jenkins/scripts/build-images.sh'
             }
         }
-        
         stage('push to ecr') {
             steps {
-                sh 'aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 501107650877.dkr.ecr.eu-central-1.amazonaws.com'
-                sh 'docker tag msb-hub-api:latest 501107650877.dkr.ecr.eu-central-1.amazonaws.com/msb-hub:latest'
-                sh 'docker tag msb-hub-client:latest 501107650877.dkr.ecr.eu-central-1.amazonaws.com/msb-hub-client:latest'
-                sh 'docker push 501107650877.dkr.ecr.eu-central-1.amazonaws.com/msb-hub:latest'
-                sh 'docker push 501107650877.dkr.ecr.eu-central-1.amazonaws.com/msb-hub-client:latest'
+                sh './jenkins/scripts/ecr-push.sh'
             }
         }
-
-        stage('k8s deploy') {
+        stage('eks deploy') {
             steps {
                 withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'K8S', namespace: '', serverUrl: '') {
-                    sh 'curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.22.6/2022-03-09/bin/linux/amd64/kubectl'
-                    sh 'chmod u+x ./kubectl'
-                    sh './kubectl apply -f infra/k8s/api-config.yaml'
-                    sh './kubectl apply -f infra/k8s/client-config.yaml'
-                    sh './kubectl apply -f infra/k8s/ingress-srv.yaml'
+                    sh './jenkins/scripts/eks-deploy.sh'
             }
         }
     }
