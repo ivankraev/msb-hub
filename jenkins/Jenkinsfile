@@ -28,7 +28,7 @@ pipeline {
 
         stage('docker build image') {
             steps {
-                sh 'docker build -t gsdatabase/api . -f Dockerfile.prod'
+                sh 'cd api && docker build -t gsdatabase/api . -f Dockerfile.prod'
             }
         }
         
@@ -37,6 +37,6 @@ pipeline {
                 sh 'echo finish'
             }
         }
-        
+
     }
 }
