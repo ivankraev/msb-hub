@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "msp-hub",
   "license": "MIT",
+  "engines": {
+    "node": "v16.14.2"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.prod.json",
     "dev": "ts-node-dev -r tsconfig-paths/register ./src/app.ts",

@@ -41,9 +41,6 @@ spec:
             - name: PGDATABASE
               value: postgres
             - name: PGPASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: bgpassword
-                  key: PGPASSWORD
+              value: pgspassword
             - name: DATABASE_URL
               value: fakedb
