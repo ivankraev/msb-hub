@@ -7,8 +7,14 @@ pipeline {
     environment {
         CI = 'true'
     }
-    sh "chmod +x -R ${env.WORKSPACE}"
+    
     stages {
+        stage('grant permission'){
+            steps{
+                sh "chmod +x -R ${env.WORKSPACE}"
+            }
+        }
+
         stage('Install dependencies') {
             steps {
                 sh 'cd api && npm install'
