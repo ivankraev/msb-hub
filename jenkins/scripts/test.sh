@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
 
-npm run test
+npm test
