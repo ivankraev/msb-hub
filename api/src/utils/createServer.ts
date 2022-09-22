@@ -24,5 +24,9 @@ export const createServer = () => {
     return res.sendStatus(200);
   });
 
+  app.get('/health', (req: Request, res: Response) => {
+    return res.status(200).send('Hi!');
+  });
+
   return app;
 };
