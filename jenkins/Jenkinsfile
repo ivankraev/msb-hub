@@ -35,6 +35,9 @@ pipeline {
         stage('Deliver') {
             steps {
                 sh 'echo finish'
+                sh 'docker images ls'
+                sh 'docker image rm gsdatabase/api'
+                sh 'docker images ls'
             }
         }
 
