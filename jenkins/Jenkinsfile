@@ -10,7 +10,7 @@ pipeline {
     
     stages {
         stage('grant permission'){
-            steps{
+            steps {
                 sh "chmod +x -R ${env.WORKSPACE}"
             }
         }
@@ -25,6 +25,13 @@ pipeline {
                 sh './jenkins/scripts/test.sh'
             }
         }
+
+        stage('docker build image') {
+            steps {
+                sh 'docker build -t gsdatabase/api . -f Dockerfile.prod'
+            }
+        }
+        
         stage('Deliver') {
             steps {
                 sh 'echo finish'
