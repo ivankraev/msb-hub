@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: gsdatabase/api
+          image: 501107650877.dkr.ecr.eu-central-1.amazonaws.com/msb-hub
           ports:
             - containerPort: 3000
           env:
