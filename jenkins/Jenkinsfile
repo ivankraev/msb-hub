@@ -46,7 +46,7 @@ pipeline {
                     sh 'curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.22.6/2022-03-09/bin/linux/amd64/kubectl'
                     sh 'curl -o kubectl.sha256 https://s3.us-west-2.amazonaws.com/amazon-eks/1.22.6/2022-03-09/bin/linux/amd64/kubectl.sha256'
                     sh 'chmod u+x ./kubectl'
-                    sh './kubectl get  pods'
+                    sh './kubectl get pods'
             }
         }
     }
