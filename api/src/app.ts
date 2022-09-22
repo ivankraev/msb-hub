@@ -1,7 +1,7 @@
 import { IncomingMessage, Server, ServerResponse } from 'http';
-import { config } from './utils/config';
-import { createServer } from './utils/createServer';
-import { logger } from './utils/logger';
+import { config } from '@utils/config';
+import { createServer } from '@utils/createServer';
+import { logger } from '@utils/logger';
 
 const signals = ['SIGINT', 'SIGTERM', 'SIGHUP'] as const;
 

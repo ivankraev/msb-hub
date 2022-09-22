@@ -4,3 +4,4 @@ coverage
 .env
 ecosystem.config.js
 jest.config.ts
+.eslintrc.js
