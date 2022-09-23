@@ -1,12 +1,11 @@
-name: git-husky-setup-workflow
+name: api-workflow
 on:
   push:
     paths:
       - "api/**"
       - ".github/workflows/api.yml"
-    push:
-      branches: [main]
-    pull_request:
+    branches: [main]
+  pull_request:
       branches: [main]
 defaults:
   run:
