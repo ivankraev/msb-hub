@@ -6,7 +6,7 @@ on:
       - ".github/workflows/api.yml"
     branches: [main]
   pull_request:
-      branches: [main]
+    branches: [main]
 defaults:
   run:
     shell: bash
@@ -23,4 +23,4 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run tests
-        run: npm test
+        run: npm run test
