@@ -29,6 +29,7 @@ spec:
       containers:
         - name: client
           image: 501107650877.dkr.ecr.eu-central-1.amazonaws.com/msb-hub-client:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
               name: client-port

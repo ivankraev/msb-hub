@@ -28,7 +28,8 @@ spec:
     spec:
       containers:
         - name: api
-          image: 501107650877.dkr.ecr.eu-central-1.amazonaws.com/msb-hub
+          image: 501107650877.dkr.ecr.eu-central-1.amazonaws.com/msb-hub:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
           env:
