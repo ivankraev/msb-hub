@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: 501107650877.dkr.ecr.eu-central-1.amazonaws.com/msb-hub:latest
+          image: gsdatabase/api
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
