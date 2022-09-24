@@ -9,42 +9,42 @@ pipeline {
     }
     stages {
         when { changeset "api/*"}
-        stage('grant permission'){
-            steps {
-                sh "chmod +x -R ${env.WORKSPACE}"
-            }
-        }
-
-        stage('Install dependencies') {
-        
-            steps {
-                sh 'cd api && npm install'
+            stage('grant permission'){
+                steps {
+                    sh "chmod +x -R ${env.WORKSPACE}"
+                }
             }
 
+            stage('Install dependencies') {
+            
+                steps {
+                    sh 'cd api && npm install'
+                }
 
-        }
-        stage('Test') {
-            steps {
-                sh './jenkins/scripts/test.sh'
-            }
-        }
 
-        stage('docker build image') {
-            steps {
-                sh './jenkins/scripts/build-images.sh'
+            }
+            stage('Test') {
+                steps {
+                    sh './jenkins/scripts/test.sh'
+                }
+            }
+
+            stage('docker build image') {
+                steps {
+                    sh './jenkins/scripts/build-images.sh'
+                }
+            }
+            stage('push to ecr') {
+                steps {
+                    sh './jenkins/scripts/ecr-push.sh'
+                }
+            }
+            stage('eks deploy') {
+                steps {
+                    withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'K8S', namespace: '', serverUrl: '') {
+                        sh './jenkins/scripts/eks-deploy.sh'
+                }
             }
         }
-        stage('push to ecr') {
-            steps {
-                sh './jenkins/scripts/ecr-push.sh'
-            }
-        }
-        stage('eks deploy') {
-            steps {
-                withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'K8S', namespace: '', serverUrl: '') {
-                    sh './jenkins/scripts/eks-deploy.sh'
-            }
-        }
-    }
   }
 }
