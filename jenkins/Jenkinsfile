@@ -8,6 +8,7 @@ pipeline {
         CI = 'true'
     }
     stages {
+        when { changeset "api/*"}
         stage('grant permission'){
             steps {
                 sh "chmod +x -R ${env.WORKSPACE}"
@@ -15,14 +16,11 @@ pipeline {
         }
 
         stage('Install dependencies') {
-            when { changeset "api/*"}
-                steps {
-                    sh 'cd api && npm install'
-                }
-            when { changeset "client/*"}
-                steps {
-                    sh 'cd client && npm install'
-                }
+        
+            steps {
+                sh 'cd api && npm install'
+            }
+
 
         }
         stage('Test') {
