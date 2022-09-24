@@ -19,6 +19,10 @@ pipeline {
                 steps {
                     sh 'cd api && npm install'
                 }
+            when { changeset "client/*"}
+                steps {
+                    sh 'cd client && npm install'
+                }
 
         }
         stage('Test') {
