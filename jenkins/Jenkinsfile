@@ -8,43 +8,80 @@ pipeline {
         CI = 'true'
     }
     stages {
-        when { changeset "api/*"}
-            stage('grant permission'){
-                steps {
-                    sh "chmod +x -R ${env.WORKSPACE}"
-                }
-            }
-
-            stage('Install dependencies') {
-            
-                steps {
-                    sh 'cd api && npm install'
-                }
-
-
-            }
-            stage('Test') {
-                steps {
-                    sh './jenkins/scripts/test.sh'
-                }
-            }
-
-            stage('docker build image') {
-                steps {
-                    sh './jenkins/scripts/build-images.sh'
-                }
-            }
-            stage('push to ecr') {
-                steps {
-                    sh './jenkins/scripts/ecr-push.sh'
-                }
-            }
-            stage('eks deploy') {
-                steps {
-                    withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'K8S', namespace: '', serverUrl: '') {
-                        sh './jenkins/scripts/eks-deploy.sh'
-                }
+        stage('grant permission'){
+            steps {
+                sh "chmod +x -R ${env.WORKSPACE}"
             }
         }
+
+        stage('Test api') {
+            when {
+                changeset "api/*.*"
+            }
+            steps {
+                sh './jenkins/scripts/api/test.sh'
+            }
+        }
+        stage('Test client') {
+            when {
+                changeset "client/*.*"
+            }
+            steps {
+                sh './jenkins/scripts/client/test.sh'
+            }
+        }
+
+        stage('build api image') {
+            when {
+                changeset "api/*.*"
+            }
+            steps {
+                sh './jenkins/scripts/api/build-image.sh'
+            }
+        }
+        stage('build client image') {
+            when {
+                changeset "client/*.*"
+            }
+            steps {
+                sh './jenkins/scripts/client/build-image.sh'
+            }
+        }
+        stage('push api image to ecr') {
+            when {
+                changeset "api/*.*"
+            }
+            steps {
+                sh './jenkins/scripts/api/ecr-push.sh'
+            }
+        }
+        stage('push client image to ecr') {
+            when {
+                changeset "client/*.*"
+            }
+            steps {
+                sh './jenkins/scripts/client/ecr-push.sh'
+            }
+        }
+        stage('api eks deploy') {
+            when {
+                changeset "api/*.*"
+            }
+            steps {
+                withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'K8S', namespace: '', serverUrl: '') {
+                    sh './jenkins/scripts/api/eks-deploy.sh'
+            }
+        }
+    }
+        stage('client eks deploy') {
+            when {
+                changeset "client/*.*"
+            }
+            steps {
+                withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'K8S', namespace: '', serverUrl: '') {
+                    sh './jenkins/scripts/client/eks-deploy.sh'
+            }
+        }
+    }
   }
 }
