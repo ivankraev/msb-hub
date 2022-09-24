@@ -16,7 +16,7 @@ pipeline {
 
         stage('Test api') {
             when {
-                changeset "api/*.*"
+                changeset "api/**"
             }
             steps {
                 sh './jenkins/scripts/api/test.sh'
@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Test client') {
             when {
-                changeset "client/*.*"
+                changeset "client/**"
             }
             steps {
                 sh './jenkins/scripts/client/test.sh'
@@ -33,7 +33,7 @@ pipeline {
 
         stage('build api image') {
             when {
-                changeset "api/*.*"
+                changeset "api/**"
             }
             steps {
                 sh './jenkins/scripts/api/build-image.sh'
@@ -41,7 +41,7 @@ pipeline {
         }
         stage('build client image') {
             when {
-                changeset "client/*.*"
+                changeset "client/**"
             }
             steps {
                 sh './jenkins/scripts/client/build-image.sh'
@@ -49,7 +49,7 @@ pipeline {
         }
         stage('push api image to ecr') {
             when {
-                changeset "api/*.*"
+                changeset "api/**"
             }
             steps {
                 sh './jenkins/scripts/api/ecr-push.sh'
@@ -57,7 +57,7 @@ pipeline {
         }
         stage('push client image to ecr') {
             when {
-                changeset "client/*.*"
+                changeset "client/**"
             }
             steps {
                 sh './jenkins/scripts/client/ecr-push.sh'
@@ -65,7 +65,7 @@ pipeline {
         }
         stage('api eks deploy') {
             when {
-                changeset "api/*.*"
+                changeset "api/**"
             }
             steps {
                 withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'K8S', namespace: '', serverUrl: '') {
@@ -75,7 +75,7 @@ pipeline {
     }
         stage('client eks deploy') {
             when {
-                changeset "client/*.*"
+                changeset "client/**"
             }
             steps {
                 withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'K8S', namespace: '', serverUrl: '') {
