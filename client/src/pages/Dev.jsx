@@ -26,7 +26,7 @@ function Dev() {
       <p style={{ margin: 0 }}>
         Connected to API: <span style={config.styles}>{config.text}</span>
       </p>
-      <h2>MSB-Hub Development infrastructure</h2>
+      <h2>MSB-Hub Development infrastructure!!</h2>
       <br />
       <br />
       <Diagram />
