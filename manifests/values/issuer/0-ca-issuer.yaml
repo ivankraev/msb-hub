@@ -1,8 +1,0 @@
----
-apiVersion: cert-manager.io/v1
-kind: ClusterIssuer
-metadata:
-  name: msb-hub-ca
-spec:
-  ca:
-    secretName: msb-hub-key-pair

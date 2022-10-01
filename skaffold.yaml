@@ -3,7 +3,7 @@ kind: Config
 deploy:
   kubectl:
     manifests:
-      - ./infra/k8s/*
+      - ./manifests/development/*
 build:
   local:
     push: false
@@ -11,7 +11,7 @@ build:
     - image: gsdatabase/api
       context: api
       docker:
-        dockerfile: Dockerfile.prod
+        dockerfile: Dockerfile.dev
       sync:
         manual:
           - src: "./api/**/*.js"
@@ -19,7 +19,7 @@ build:
     - image: gsdatabase/client
       context: client
       docker:
-        dockerfile: Dockerfile.prod
+        dockerfile: Dockerfile.dev
       sync:
         manual:
           - src: "client/**/*.js"

@@ -24,12 +24,11 @@ RUN apk --no-cache -U upgrade
 RUN mkdir -p /home/node/app/build && chown -R node:node /home/node/app 
 # Set CWD
 WORKDIR /home/node/app
-# Install PM2
-RUN npm install -g pm2
+
 # Copy package.json, package-lock.json
-COPY package*.json ecosystem.config.js ./
+COPY package*.json ./
 # Provide access to the package-lock.json (for some reason 700 doesnt work)
-RUN chmod 777 /home/node/app/package-lock.json
+# RUN chmod 777 /home/node/app/package-lock.json
 # Install libraries as user node
 RUN npm i --omit=dev
 # Copy js files and change ownership to user node
@@ -41,4 +40,4 @@ EXPOSE ${PORT}
 USER node
 
 # Use PM2 to run the application as stated in config file
-ENTRYPOINT ["pm2-runtime", "ecosystem.config.js"] 
+ENTRYPOINT ["node", "build/app.js"] 
