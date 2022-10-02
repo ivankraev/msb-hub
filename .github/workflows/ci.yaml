@@ -21,7 +21,11 @@ jobs:
 
       - name: Semantic versioning
         id: versioning
-        uses: codacy/git-version@2.5.4
+        uses: negz/create-tag@v1
+        with:
+          version: ${{ github.event.inputs.version }}
+          message: ${{ github.event.inputs.message }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release
         if: ${{ !startsWith(github.ref, 'refs/tags/') }}
