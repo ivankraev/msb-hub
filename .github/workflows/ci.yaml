@@ -22,15 +22,26 @@ jobs:
       - name: Semantic versioning
         id: versioning
         uses: PaulHatch/semantic-version@v5.0.0-alpha2
-        with:
-          branch: main
-          tag_prefix: "v"
-          major_pattern: "BREAKING CHANGE"
-          major_regexp_flags: "ig"
-          minor_pattern: "feat"
-          minor_regexp_flags: "ig"
-          search_commit_body: true
-          format: "v${major}.${minor}.${patch}"
+- uses: iautom8things/semantic-version@v4.0.5
+  with:
+    # The prefix to use to identify tags
+    tag_prefix: "v"
+    # A string which, if present in a git commit, indicates that a change represents a
+    # major (breaking) change, supports regular expressions wrapped with '/'
+    major_pattern: "(MAJOR)"
+    # Same as above except indicating a minor change, supports regular expressions wrapped with '/'
+    minor_pattern: "(MINOR)"
+    # A string to determine the format of the version output
+    format: "${major}.${minor}.${patch}-prerelease${increment}"
+    # Indicate whether short tags like 'v1' should be supported. If false only full
+    # tags like 'v1.0.0' will be recognized.
+    short_tags: true
+    # If this is set to true, *every* commit will be treated as a new version.
+    bump_each_commit: false
+    # If this is set to true, patterns will be applied to the `test_value` instead of git commit messages
+    use_test_value: false
+    # test major/minor patterns against this value.  This example shows how you can test against a PR's branch name
+    test_value: ${{ github.event.pull_request.head.ref }}
 
       - name: Create Release
         if: ${{ !startsWith(github.ref, 'refs/tags/') }}
