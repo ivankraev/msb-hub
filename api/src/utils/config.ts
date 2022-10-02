@@ -9,7 +9,7 @@ const schema = Type.Object({
     default: 3000,
   }),
   DATABASE_URL: Type.String({
-    default: 'fakeUrdsss',
+    default: 'fakeUrss',
   }),
   API_HOST: Type.String({
     default: 'http://localhost:80',
