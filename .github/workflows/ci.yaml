@@ -25,7 +25,7 @@ jobs:
         with:
           branch: main
           tag_prefix: "v"
-          major_pattern: "BREAKING CHANGE"
+          major_pattern: "BREAKING"
           minor_pattern: "feat"
           search_commit_body: true
           format: "v${major}.${minor}.${patch}"
