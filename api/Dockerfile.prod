@@ -40,4 +40,4 @@ EXPOSE ${PORT}
 USER node
 
 # Use PM2 to run the application as stated in config file
-ENTRYPOINT ["node", "build/app.js"] 
+ENTRYPOINT ["node", "dist/main.js"] 
