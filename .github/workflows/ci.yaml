@@ -21,15 +21,16 @@ jobs:
 
       - name: Semantic versioning
         id: versioning
-        uses: mathieudutour/github-tag-action@v6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Create a GitHub release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: ${{ steps.tag_version.outputs.new_tag }}
-          name: Release ${{ steps.tag_version.outputs.new_tag }}
-          body: ${{ steps.tag_version.outputs.changelog }}
+        uses: LongOddCode/semantic-versioning-tag@0.6.0
+              id: svt
+            
+            - name: validation and set params
+              run: |
+                  echo ${{ steps.svt.outputs.major }}
+                  echo ${{ steps.svt.outputs.minor }}
+                  echo ${{ steps.svt.outputs.patch }}
+                  echo ${{ steps.svt.outputs.prerelease }}
+                  echo ${{ steps.svt.outputs.buildmetadata }}
 
       - name: Create Release
         if: ${{ !startsWith(github.ref, 'refs/tags/') }}
