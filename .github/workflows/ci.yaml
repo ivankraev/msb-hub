@@ -29,6 +29,7 @@ jobs:
           minor_pattern: "(MINOR)"
           minor_regexp_flags: "feat"
           major_regexp_flags: "BREAKING CHANGES"
+          search_commit_body: true
           format: "v${major}.${minor}.${patch}"
 
       - name: Create Release
