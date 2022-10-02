@@ -25,8 +25,10 @@ jobs:
         with:
           branch: main
           tag_prefix: "v"
-          major_pattern: "breaking changes"
+          major_pattern: "BREAKING CHANGES"
           minor_pattern: "feat"
+          minor_regexp_flags: "feat"
+          major_regexp_flags: "BREAKING CHANGES"
           search_commit_body: true
           format: "v${major}.${minor}.${patch}"
 
