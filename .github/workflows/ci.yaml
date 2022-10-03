@@ -26,7 +26,7 @@ jobs:
           tag_prefix: "v"
           minor_pattern: "feat"
           minor_regexp_flags: ""
-          major_pattern: "BREAKING CHANGE"
+          major_pattern: BREAKING CHANGE
           major_regexp_flags: ""
           format: "v${major}.${minor}.${patch}"
           search_commit_body: true
