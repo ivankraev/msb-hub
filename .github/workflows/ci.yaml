@@ -24,10 +24,10 @@ jobs:
         uses: paulhatch/semantic-version@v4.0.2
         with:
           tag_prefix: "v"
-          major_pattern: "BREAKING CHANGE"
-          major_regexp_flags: "idgs"
           minor_pattern: "feat"
           minor_regexp_flags: "idgs"
+          major_pattern: "BREAKING CHANGE"
+          major_regexp_flags: "idgs"
           format: "v${major}.${minor}.${patch}"
           search_commit_body: true
 
