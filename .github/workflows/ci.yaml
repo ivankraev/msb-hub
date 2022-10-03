@@ -4,12 +4,8 @@ on:
     branches:
       - main
 
-env:
-  DOCKER_USERNAME: thedoorknobster
-  REPO: thedoorknobster/sample-app
-
 jobs:
-  docker:
+  Semantic versioning:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
