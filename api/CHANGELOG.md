@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [10.4.9](https://github.com/ivankraev/msb-hub/compare/v10.4.7...v10.4.9) (2022-10-06)
+
+
+### 🐛 Bug Fixes
+
+* **shdsa:** adsas ([a4c4f01](https://github.com/ivankraev/msb-hub/commit/a4c4f014f0f572e31fee14358602ff3ff14dfa00))
+
 ### [10.4.8](https://github.com/ivankraev/msb-hub/compare/v10.4.7...v10.4.8) (2022-10-06)
 
 ### [10.4.7](https://github.com/ivankraev/msb-hub/compare/v10.4.6...v10.4.7) (2022-10-06)
