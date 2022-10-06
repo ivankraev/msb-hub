@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [10.5.28](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.28) (2022-10-06)
+
+### [10.5.27](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.27) (2022-10-06)
+
+### [10.5.26](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.26) (2022-10-06)
+
+### [10.5.25](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.25) (2022-10-06)
+
+### [10.5.24](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.24) (2022-10-06)
+
+### [10.5.23](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.23) (2022-10-06)
+
+### [10.5.22](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.22) (2022-10-06)
+
+### [10.5.21](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.21) (2022-10-06)
+
+### [10.5.20](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.20) (2022-10-06)
+
+### [10.5.19](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.19) (2022-10-06)
+
+### [10.5.18](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.18) (2022-10-06)
+
+### [10.5.17](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.17) (2022-10-06)
+
+### [10.5.16](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.16) (2022-10-06)
+
+### [10.5.15](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.15) (2022-10-06)
+
+### [10.5.14](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.14) (2022-10-06)
+
+### [10.5.13](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.13) (2022-10-06)
+
 ### [10.5.12](https://github.com/ivankraev/msb-hub/compare/v10.5.11...v10.5.12) (2022-10-06)
 
 ### [10.5.11](https://github.com/ivankraev/msb-hub/compare/v10.5.10...v10.5.11) (2022-10-06)
