@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/ivankraev/msb-hub/compare/v10.1.0...v2.3.0) (2022-10-06)
+
+
+### ✨ Features
+
+* **feat:** feat ([00885fb](https://github.com/ivankraev/msb-hub/commit/00885fb5883a2b98045518ef383493667c20b05b))
+* **new feat:** feat ([3559006](https://github.com/ivankraev/msb-hub/commit/355900654bfbf82bc529182ad5d152659c009b57))
+
 ### [2.1.1](https://github.com/ivankraev/msb-hub/compare/v2.1.0...v2.1.1) (2022-10-02)
 
 
