@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.22.0](https://github.com/ivankraev/msb-hub/compare/v10.21.9...v10.22.0) (2022-10-06)
+
+
+### ✨ Features
+
+* **xsf:** sdfsd ([31b4dfc](https://github.com/ivankraev/msb-hub/commit/31b4dfc605f87e7cf8ed548d528c1d975409cb01))
+
 ### [10.21.16](https://github.com/ivankraev/msb-hub/compare/v10.9.0...v10.21.16) (2022-10-06)
 
 
