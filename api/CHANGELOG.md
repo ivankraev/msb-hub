@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [10.21.5](https://github.com/ivankraev/msb-hub/compare/v10.9.0...v10.21.5) (2022-10-06)
+
+
+### 🚚 Chores
+
+* **release:** 10.21.1 ([7886d0c](https://github.com/ivankraev/msb-hub/commit/7886d0cfe10c81c55ffac2cad68a5df63a28ab0a))
+* **release:** 10.21.2 ([9616bb3](https://github.com/ivankraev/msb-hub/commit/9616bb3e69aecf5fac355417886e4b19f98a3332))
+* **release:** 10.21.3 ([81ac63a](https://github.com/ivankraev/msb-hub/commit/81ac63ac6f589e389fade5ddc7242e4bb8075472))
+* **release:** 10.21.4 ([5de7d7b](https://github.com/ivankraev/msb-hub/commit/5de7d7b43aa06e11ee3471d4335a2134b9597dd3))
+
 ### [10.21.4](https://github.com/ivankraev/msb-hub/compare/v10.9.0...v10.21.4) (2022-10-06)
 
 
