@@ -1,6 +1,6 @@
 {
   "name": "msb-hub",
-  "version": "10.4.17",
+  "version": "10.4.18",
   "main": "index.js",
   "author": "msp-hub",
   "license": "MIT",
@@ -15,7 +15,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "commit": "cz",
-    "release": "standard-version"
+    "tagg": "standard-version",
+    "release": "yarn tag && git push && --follow-tags origin '$(git rev-parse --abbrev-ref HEAD)'"
   },
   "dependencies": {
     "@sinclair/typebox": "^0.24.27",
