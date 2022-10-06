@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [10.5.39](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.39) (2022-10-06)
+
+
+### 🚚 Chores
+
+* **release:** 10.5.29 ([b6b676b](https://github.com/ivankraev/msb-hub/commit/b6b676b1104d22bedda1a5a6896f0734a6b9c633))
+* **release:** 10.5.30 ([3e18069](https://github.com/ivankraev/msb-hub/commit/3e18069f9d7b2d6511b041063e5cbeca36efccac))
+* **release:** 10.5.31 ([3091bbe](https://github.com/ivankraev/msb-hub/commit/3091bbe83023c038873453705a524303257c2057))
+* **release:** 10.5.32 ([1f0a35f](https://github.com/ivankraev/msb-hub/commit/1f0a35fa57a88a3fb5b35f4232557bb94cb6359f))
+* **release:** 10.5.33 ([8988b82](https://github.com/ivankraev/msb-hub/commit/8988b82e3b03b0a3f57e1e461562f7bed9b8c0f7))
+* **release:** 10.5.34 ([83bf48a](https://github.com/ivankraev/msb-hub/commit/83bf48a1cba5545afdc19d9745c84e0d6f7ac296))
+* **release:** 10.5.35 ([40f69b2](https://github.com/ivankraev/msb-hub/commit/40f69b23dc7f88056d3a61e71e440d658c0e2600))
+* **release:** 10.5.36 ([39c6dac](https://github.com/ivankraev/msb-hub/commit/39c6dac8a620870343ba6d05b04120e14fe3c082))
+* **release:** 10.5.37 ([aa0c492](https://github.com/ivankraev/msb-hub/commit/aa0c4926962540414269e5bd58e9f47e3f13ac93))
+* **release:** 10.5.38 ([f47ae7f](https://github.com/ivankraev/msb-hub/commit/f47ae7f7acd5226f76023fa1f9dc87eb2419987a))
+
 ### [10.5.38](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.38) (2022-10-06)
 
 
