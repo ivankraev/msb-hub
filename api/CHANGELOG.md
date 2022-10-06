@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [10.21.15](https://github.com/ivankraev/msb-hub/compare/v10.9.0...v10.21.15) (2022-10-06)
+
+
+### 🚚 Chores
+
+* **release:** 10.21.1 ([7886d0c](https://github.com/ivankraev/msb-hub/commit/7886d0cfe10c81c55ffac2cad68a5df63a28ab0a))
+* **release:** 10.21.10 ([e456e87](https://github.com/ivankraev/msb-hub/commit/e456e87625d9438c3b361ca5d55c6245b9228057))
+* **release:** 10.21.11 ([55595cc](https://github.com/ivankraev/msb-hub/commit/55595cc5706831fa3beb81528ffcb62235af1775))
+* **release:** 10.21.12 ([a5f8d21](https://github.com/ivankraev/msb-hub/commit/a5f8d2180e3bb23e4e8602aa3b485acf6250ab88))
+* **release:** 10.21.13 ([4363586](https://github.com/ivankraev/msb-hub/commit/436358630dbd650a7397e97e7c09a03d07c2a218))
+* **release:** 10.21.14 ([f2c61fa](https://github.com/ivankraev/msb-hub/commit/f2c61fa3639d51b07aae2a4045beacbe555a0825))
+* **release:** 10.21.2 ([9616bb3](https://github.com/ivankraev/msb-hub/commit/9616bb3e69aecf5fac355417886e4b19f98a3332))
+* **release:** 10.21.3 ([81ac63a](https://github.com/ivankraev/msb-hub/commit/81ac63ac6f589e389fade5ddc7242e4bb8075472))
+* **release:** 10.21.4 ([5de7d7b](https://github.com/ivankraev/msb-hub/commit/5de7d7b43aa06e11ee3471d4335a2134b9597dd3))
+* **release:** 10.21.5 ([f0d1b5b](https://github.com/ivankraev/msb-hub/commit/f0d1b5bbf3e6c2b25d041f805b66765696f0330d))
+* **release:** 10.21.6 ([35c4f5e](https://github.com/ivankraev/msb-hub/commit/35c4f5e169b602b08bbaf6d8de223ddd4b109b1d))
+* **release:** 10.21.7 ([6ed7c3e](https://github.com/ivankraev/msb-hub/commit/6ed7c3e8f38990ddda19c83c500fd1131782b9de))
+* **release:** 10.21.8 ([94ee3cc](https://github.com/ivankraev/msb-hub/commit/94ee3cca9d8b7d37ba3599d8621e0af0a0e9c6d5))
+* **release:** 10.21.9 ([6d802b1](https://github.com/ivankraev/msb-hub/commit/6d802b1bdcf059718c5bb607247e23856bfd8639))
+
 ### [10.21.14](https://github.com/ivankraev/msb-hub/compare/v10.9.0...v10.21.14) (2022-10-06)
 
 
