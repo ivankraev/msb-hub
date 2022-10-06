@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.6.0](https://github.com/ivankraev/msb-hub/compare/v10.5.44...v10.6.0) (2022-10-06)
+
+
+### ✨ Features
+
+* **asda:** sdas ([2038fbd](https://github.com/ivankraev/msb-hub/commit/2038fbd4bedb44d5b21b704b7bac6add4ba0b313))
+
 ### [10.5.45](https://github.com/ivankraev/msb-hub/compare/v10.5.12...v10.5.45) (2022-10-06)
 
 
