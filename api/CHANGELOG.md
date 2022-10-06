@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [10.5.11](https://github.com/ivankraev/msb-hub/compare/v10.5.10...v10.5.11) (2022-10-06)
+
 ### [10.5.10](https://github.com/ivankraev/msb-hub/compare/v10.5.9...v10.5.10) (2022-10-06)
 
 ### [10.5.9](https://github.com/ivankraev/msb-hub/compare/v10.5.8...v10.5.9) (2022-10-06)
