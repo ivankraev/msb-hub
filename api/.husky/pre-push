@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
-
-yarn release git push --follow-tags origin "$(git rev-parse --abbrev-ref HEAD)"
+cd api
+yarn release 
+git push --follow-tags origin "$(git rev-parse --abbrev-ref HEAD)"
