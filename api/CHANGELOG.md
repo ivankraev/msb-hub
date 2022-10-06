@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.29.0](https://github.com/ivankraev/msb-hub/compare/v10.21.9...v10.29.0) (2022-10-06)
+
+
+### ✨ Features
+
+* **xsf:** sdfsd ([31b4dfc](https://github.com/ivankraev/msb-hub/commit/31b4dfc605f87e7cf8ed548d528c1d975409cb01))
+
+
+### 🚚 Chores
+
+* **release:** 10.22.0 ([226f2a9](https://github.com/ivankraev/msb-hub/commit/226f2a96fadd12a9a306d020e1637f61068704df))
+* **release:** 10.23.0 ([b1606eb](https://github.com/ivankraev/msb-hub/commit/b1606ebd1a27cc003668f338ab8b9a9f41a248af))
+* **release:** 10.24.0 ([0374669](https://github.com/ivankraev/msb-hub/commit/0374669b79adb4dfabecdd35dc67bccd030f87a6))
+* **release:** 10.25.0 ([0e71ae9](https://github.com/ivankraev/msb-hub/commit/0e71ae97bf1211c879930da213273290b77359b5))
+* **release:** 10.26.0 ([9baf5e6](https://github.com/ivankraev/msb-hub/commit/9baf5e6a26144367f24a2053cd28c185bbd623e1))
+* **release:** 10.27.0 ([6b6833e](https://github.com/ivankraev/msb-hub/commit/6b6833eff2de247c3cc9241cab20af5d3895f603))
+* **release:** 10.28.0 ([ff76817](https://github.com/ivankraev/msb-hub/commit/ff768175242e2a28caed0f6c8be547947fe49789))
+
 ## [10.28.0](https://github.com/ivankraev/msb-hub/compare/v10.21.9...v10.28.0) (2022-10-06)
 
 
