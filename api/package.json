@@ -1,6 +1,6 @@
 {
   "name": "msb-hub",
-  "version": "10.21.2",
+  "version": "10.21.3",
   "main": "index.js",
   "author": "msp-hub",
   "license": "MIT",
