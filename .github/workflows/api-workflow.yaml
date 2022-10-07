@@ -2,11 +2,11 @@ name: api-workflow
 on:
   push:
     paths:
-      - "api/**"
-      - ".github/workflows/api.yml"
-    branches: [main]
+      - "apis/**"
+      - ".github/workflows/apis.yml"
+    branches: [mains]
   pull_request:
-    branches: [main]
+    branches: [mains]
 defaults:
   run:
     shell: bash
