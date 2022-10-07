@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [11.0.1](https://github.com/ivankraev/msb-hub/compare/v11.0.0...v11.0.1) (2022-10-07)
+
+
+### 🐛 Bug Fixes
+
+* **asdas:** das ([22a90e7](https://github.com/ivankraev/msb-hub/commit/22a90e73ab267df15d725d61d86321d47471747b))
+
 ## [11.0.0](https://github.com/ivankraev/msb-hub/compare/v10.39.0...v11.0.0) (2022-10-07)
 
 
