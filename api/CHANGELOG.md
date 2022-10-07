@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.38.0](https://github.com/ivankraev/msb-hub/compare/v10.36.0...v10.38.0) (2022-10-07)
+
+
+### ✨ Features
+
+* **sad:** das ([7e02ba1](https://github.com/ivankraev/msb-hub/commit/7e02ba165d644b0dacdf1e2b0ce16e9acf026fa4))
+
 ## [10.37.0](https://github.com/ivankraev/msb-hub/compare/v10.21.9...v10.37.0) (2022-10-06)
 
 
